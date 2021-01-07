@@ -1,5 +1,6 @@
 # Linux101
 
+---
 
 #### Network Commands
 
@@ -11,6 +12,8 @@ Remember if you are on a LAN, there is a central router that routes traffic to y
 Network Address Translation(NAT) allows a single device, such as a router, to act as an agent between the Internet (or public network) and a local network (or private network), which means that only a single unique IP address is required to represent an entire group of computers to anything outside their network.
 IP like 96.143.22.333 is the one that everyone sees on the outside, you are allocated a private address inside your LAN
 Based on that private IP traffic is routed to you from the internet
+
+---
 
 #### find: Find a dir/file exist in a dir
 
