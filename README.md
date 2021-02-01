@@ -13,6 +13,28 @@ Network Address Translation(NAT) allows a single device, such as a router, to ac
 IP like 96.143.22.333 is the one that everyone sees on the outside, you are allocated a private address inside your LAN
 Based on that private IP traffic is routed to you from the internet
 
+
+
+##### Wireshark
+```
+How to install wireshark on Linux:
+
+sudo apt-get install wireshark
+>>Allow sub user access to capture packets
+sudo addgroup -system wireshark
+>>addgroup: The group `wireshark' already exists as a system group. Exiting.
+sudo chown root:wireshark /usr/bin/dumpcap
+sudo setcap cap_net_raw,cap_net_admin=eip /usr/bin/dumpcap
+sudo usermod -a -G wireshark ark
+
+```
+Installation tutorial:https://www.youtube.com/watch?v=GCpl01pqKmA
+
+Basic tutorial for wireshark: https://www.youtube.com/watch?v=lb1Dw0elw0Q&pbjreload=101
+
+
+
+
 ---
 
 #### find: Find a dir/file exist in a dir
