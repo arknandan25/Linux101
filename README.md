@@ -38,3 +38,9 @@ cf_encrypted is the new encrypted file.
 This will create doc_without_pass2.pdf file which should open without a password.
 
 ---
+
+#### Mac specific stuff
+```
+cmd+shift+. to view hidden files in a directory
+cmd+shift+h to view home directory
+```
