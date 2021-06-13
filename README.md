@@ -67,6 +67,7 @@ cmd+shift+. to view hidden files in a directory
 cmd+shift+h to view home directory
 ```
 
+---
 
 #### Vim Linux Editor
 ```
@@ -90,3 +91,5 @@ When in command mode:
 > :w! - force save changes to file
 ```
 Vim Cheat Sheet - https://www.thegeekdiary.com/basic-vi-commands-cheat-sheet/
+
+---
