@@ -66,3 +66,27 @@ This will create doc_without_pass2.pdf file which should open without a password
 cmd+shift+. to view hidden files in a directory
 cmd+shift+h to view home directory
 ```
+
+
+#### Vim Linux Editor
+```
+vi file_name_to_open
+when opened you are in command mode, press i for goig to insert mode and add data
+press esc to exit to command mode
+
+When in command mode:
+> take cursor to specific line and press dd to delete that line
+> 10dd - delete 10 lines from the cursor's current position
+> :89,91d - delete data from lines 89 to 91
+> :89d - delete line 89
+> dG - delete entire file
+
+> Got to specific line (line 50) on vim- :50
+
+> :w - save changes
+> :q - exit file
+> :wq - save and exit file
+> :q! - quit but donot save changes
+> :w! - force save changes to file
+```
+Vim Cheat Sheet - https://www.thegeekdiary.com/basic-vi-commands-cheat-sheet/
