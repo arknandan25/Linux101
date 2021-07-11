@@ -47,6 +47,43 @@ find . -name "*.php"       [Search for all files with .php extension]
 If file exist in that dir it will be shown else no o/p
 
 ---
+#### Linux for everyday
+```
+Check if a file exists: > ls -l <name of the file>
+Create a new file: > touch <filename>
+
+
+```
+
+The Pipe is a command in Linux that lets you use two or more commands such that output of one command serves as input to the next. In short, the output of each process directly as input to the next one like a pipeline. The symbol '|' denotes a pipe.
+**Pipe with cat:**
+```
+cat lauda.txt | less  show less data i.e view from start
+cat lauda.txt | more
+Press q to exit
+
+```
+
+**Pipe with grep**
+You may manually skim the content yourself to trace the information. A better option is to use the grep command. It will scan the document for the desired information and present the result in a format you want.
+Syntax: grep search_string
+-v	Shows all the lines that do not match the searched string
+-c	Displays only the count of matching lines
+-n	Shows the matching line and its number
+-i	Match both (upper and lower) case
+-l	Shows just the name of the file with the string
+
+```
+cat lauda.txt | grep Lorem   would just give the lines where your string matched
+cat lauda.txt | grep -v Lorem 
+cat lauda.txt | grep -vn Lorem
+**cat lauda.txt | grep -n "Lorem" **
+cat lauda.txt | grep -i "LoRem"
+cat lauda.txt | grep -ic "LoRem"
+```
+
+---
+
 
 #### Encrypting pdfs
 
@@ -81,6 +118,9 @@ When in command mode:
 > :89,91d - delete data from lines 89 to 91
 > :89d - delete line 89
 > dG - delete entire file
+Adding line numbers to VIM:
+> :set number
+> :set nonumber
 
 > Got to specific line (line 50) on vim- :50
 
