@@ -142,3 +142,6 @@ SSH agent forwarding allows you to use your private, local SSH key remotely with
 * Highlighted text shows the basic use of a forwarding agent and the -A switch: https://dev.to/levivm/how-to-use-ssh-and-ssh-agent-forwarding-more-secure-ssh-2c32#:~:text=There%20is%20a,your%20local%20machine
 
 ---
+#### Permisisons In Linux/Unix File System
+* Understanding the basics of permissions: https://its.unc.edu/research-computing/techdocs/how-to-use-unix-and-linux-file-permissions/#:~:text=Column%20Value%20Permissions,execute%20%20rwx
+* Understanding the (u, g, o, a, +, -, =) with ```chmod``` : https://linuxize.com/post/chmod-command-in-linux/#:~:text=users%20class-,When%20setting%20permissions%20for%20more,bit%20to%20a%20given%20directory,-chmod%20o%2Bt
