@@ -132,4 +132,13 @@ Adding line numbers to VIM:
 ```
 Vim Cheat Sheet - https://www.thegeekdiary.com/basic-vi-commands-cheat-sheet/
 
+
+---
+
+#### SSH Forwarding Agent
+SSH agent forwarding allows you to use your private, local SSH key remotely without worrying about leaving confidential data on the server you're working with. It's built into ssh , and is easy to set up and use.
+
+* Good visual understanding of SSH forwarding agent: http://www.unixwiz.net/techtips/ssh-agent-forwarding.html#:~:text=issues-,public%20key%20access%20with%20agent%20forwarding,-With
+* Highlighted text shows the basic use of a forwarding agent and the -A switch: https://dev.to/levivm/how-to-use-ssh-and-ssh-agent-forwarding-more-secure-ssh-2c32#:~:text=There%20is%20a,your%20local%20machine
+
 ---
