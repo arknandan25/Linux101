@@ -51,9 +51,21 @@ If file exist in that dir it will be shown else no o/p
 ```
 Check if a file exists: > ls -l <name of the file>
 Create a new file: > touch <filename>
-
-
+Move a file to a specific directory:  > mv filename /path/of/address/to/move/file
+Find your shell: > echo $0
+Unzip tar/zipped directories: > tar xvf <name of the tarball>     will extract all the files
+List the files inside a tarball:  > tar tf <Tarball name>
+* Create a tarball, append in an existing one, many more: https://www.fosslinux.com/34665/15-tar-command-in-linux-uses-with-examples.htm
 ```
+
+Find the current logged in User
+```
+> echo $USER
+> whoami
+> id -un        // gives the name of all the users
+> id -u         // gives the UID for the current user
+```
+
 
 The Pipe is a command in Linux that lets you use two or more commands such that output of one command serves as input to the next. In short, the output of each process directly as input to the next one like a pipeline. The symbol '|' denotes a pipe.
 **Pipe with cat:**
@@ -142,6 +154,9 @@ SSH agent forwarding allows you to use your private, local SSH key remotely with
 * Highlighted text shows the basic use of a forwarding agent and the -A switch: https://dev.to/levivm/how-to-use-ssh-and-ssh-agent-forwarding-more-secure-ssh-2c32#:~:text=There%20is%20a,your%20local%20machine
 
 ---
+
 #### Permisisons In Linux/Unix File System
 * Understanding the basics of permissions: https://its.unc.edu/research-computing/techdocs/how-to-use-unix-and-linux-file-permissions/#:~:text=Column%20Value%20Permissions,execute%20%20rwx
 * Understanding the (u, g, o, a, +, -, =) with ```chmod``` : https://linuxize.com/post/chmod-command-in-linux/#:~:text=users%20class-,When%20setting%20permissions%20for%20more,bit%20to%20a%20given%20directory,-chmod%20o%2Bt
+
+The chown command allows you to change the user and/or group ownership of a given file, directory, or symbolic link. Link to chown article:https://linuxize.com/post/linux-chown-command/
