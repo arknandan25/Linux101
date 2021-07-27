@@ -129,9 +129,15 @@ If file exist in that dir it will be shown else no o/p
 #### Linux for everyday
 ```
 Check if a file exists: > ls -l <name of the file>
+
 Create a new file: > touch <filename>
+
 Move a file to a specific directory:  > mv filename /path/of/address/to/move/file
+
 Find your shell: > echo $0
+
+Make a dir in a particular parent dir: > mkdir -p <path/path of dir>
+
 Unzip tar/zipped directories: > tar xvf <name of the tarball>     will extract all the files
 List the files inside a tarball:  > tar tf <Tarball name>
 * Create a tarball, append in an existing one, many more: https://www.fosslinux.com/34665/15-tar-command-in-linux-uses-with-examples.htm
