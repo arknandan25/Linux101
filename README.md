@@ -106,27 +106,9 @@ ark_file1v	ark_file2r	ark_file3n	ark_file4j	ark_file5f
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Parameter Expansion - retrieve and transforms stored values: ${..} or $var_name to retieve the variable's value.
 
 
-
-
-
-
-
-
-
 ---
 
-#### find: Find a dir/file exist in a dir
-
-```
-find . -name <name of file/dir to search>         [. means current dir]
-find . -name "*.php"       [Search for all files with .php extension]
-```
-
-If file exist in that dir it will be shown else no o/p
-
----
-
-#### Linux for everyday
+## Linux for everyday
 ```
 Check if a file exists: > ls -l <name of the file>
 
@@ -182,7 +164,19 @@ cat lauda.txt | grep -ic "LoRem"
 ---
 
 
-#### Encrypting pdfs
+
+#### find: Find a dir/file exist in a dir
+
+```
+find . -name <name of file/dir to search>         [. means current dir]
+find . -name "*.php"       [Search for all files with .php extension]
+```
+
+If file exist in that dir it will be shown else no o/p
+
+---
+
+## Encrypting pdfs
 
 ```
 brew install qpdf
@@ -195,7 +189,7 @@ This will create doc_without_pass2.pdf file which should open without a password
 
 ---
 
-#### Mac specific stuff
+## Mac specific stuff
 ```
 cmd+shift+. to view hidden files in a directory
 cmd+shift+h to view home directory
@@ -203,7 +197,7 @@ cmd+shift+h to view home directory
 
 ---
 
-#### Vim Linux Editor
+## Vim Linux Editor
 ```
 vi file_name_to_open
 when opened you are in command mode, press i for goig to insert mode and add data
@@ -232,7 +226,7 @@ Vim Cheat Sheet - https://www.thegeekdiary.com/basic-vi-commands-cheat-sheet/
 
 ---
 
-#### SSH Forwarding Agent
+## SSH & SSH Forwarding Agent
 SSH agent forwarding allows you to use your private, local SSH key remotely without worrying about leaving confidential data on the server you're working with. It's built into ssh , and is easy to set up and use.
 
 * Good visual understanding of SSH forwarding agent: http://www.unixwiz.net/techtips/ssh-agent-forwarding.html#:~:text=issues-,public%20key%20access%20with%20agent%20forwarding,-With
