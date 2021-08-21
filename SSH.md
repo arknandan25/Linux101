@@ -4,7 +4,8 @@
 
 SSH is the most common way of connecting to a remote Linux server is through SSH. SSH stands for **Secure Shell** and provides a safe and secure way of executing commands, making changes, and configuring services remotely.
 When you connect through SSH, you log in using an account that exists on the remote server.
-
+The standard TCP port for SSH is 22.
+Learn about SSH, Architecture, RFCs,OpenSSH, Putty: https://en.wikipedia.org/wiki/Secure_Shell
 ---
 
 ### How does SSH work?
@@ -34,7 +35,7 @@ Upon receipt of this message, the client will decrypt it using the private key a
 
 ---
 
-### Generating and workign with SSH keys
+### Generating and working with SSH keys
 
 Generating a new SSH public and private key pair on your local computer is the first step towards authenticating with a remote server without a password. Unless there is a good reason not to, you should always authenticate using SSH keys.
 
@@ -61,10 +62,6 @@ This procedure has generated an RSA SSH key pair, located in the .ssh hidden dir
 ~/.ssh/id_rsa: The private key.                                      DO NOT SHARE THIS FILE!
 ~/.ssh/id_rsa.pub: The associated public key.                        This can be shared freely without consequence.
 ```
-
-
-
-
 
 * Link to the detailed aspects of SSH: https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys
 
@@ -177,3 +174,52 @@ none'' will also make the session transparent even if a tty is used.
 
 The session terminates when the command or shell on the remote machine exits and all
 X11 and TCP connections have been closed.
+
+---
+
+### Linux SysAdmin Troblesooting issues in SSH
+
+#### ISSUE1
+```
+$ ssh 192.168.1.84
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:I02UyJs2vS0ym4jWn5upAWZDqwu5RjMg4aM9hPq8G1k.
+Please contact your system administrator.
+Add correct host key in /Users/khess/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /Users/khess/.ssh/known_hosts:4
+ECDSA host key for 192.168.1.84 has changed and you have requested strict checking.
+Host key verification failed.
+```
+`known_hosts` file is a simple text file that lives inside a hidden directory (.ssh) in your home directory. What has happened here is that you've attempted to connect to a system that no longer has the IP address 192.168.1.84. A different system has that IP address and SSH is complaining that you might be getting hacked. The reality is often much less exciting. Your known_hosts file may not sync with actual host reality. First, remove a known_hosts entry with the ssh-keygen command:
+```
+$ ssh-keygen -R 192.168.1.84 -f .ssh/known_hosts
+
+ Host 192.168.1.84 found: line 4
+.ssh/known_hosts updated.
+Original contents retained as .ssh/known_hosts.old
+```
+The original entry is saved to .ssh/known_hosts.old in case it's needed in the future.
+
+After removing the 192.168.1.84 entry from the  known_hosts file, I attempted the connection again to host 192.168.1.84:
+```
+$ ssh 192.168.1.84
+The authenticity of host '192.168.1.84 (192.168.1.84)' can't be established.
+ECDSA key fingerprint is SHA256:I02UyJs2vS0ym4jWn5upAWZDqwu5RjMg4aM9hPq8G1k.
+Are you sure you want to continue connecting (yes/no)? yes
+
+Warning: Permanently added '192.168.1.84' (ECDSA) to the list of known hosts.
+```
+You can see that the key I added now matches the one listed in the error at the beginning of the article. To verify a host's key, issue the following command on the remote host:
+```
+$ ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
+256 SHA256:I02UyJs2vS0ym4jWn5upAWZDqwu5RjMg4aM9hPq8G1k no comment (ECDSA)
+```
+Link to this article: https://www.redhat.com/sysadmin/linux-knownhosts-failures
+---
