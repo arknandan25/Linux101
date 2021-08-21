@@ -5,7 +5,9 @@
 SSH is the most common way of connecting to a remote Linux server is through SSH. SSH stands for **Secure Shell** and provides a safe and secure way of executing commands, making changes, and configuring services remotely.
 When you connect through SSH, you log in using an account that exists on the remote server.
 The standard TCP port for SSH is 22.
+
 Learn about SSH, Architecture, RFCs,OpenSSH, Putty: https://en.wikipedia.org/wiki/Secure_Shell
+
 ---
 
 ### How does SSH work?
@@ -205,6 +207,10 @@ $ ssh-keygen -R 192.168.1.84 -f .ssh/known_hosts
 .ssh/known_hosts updated.
 Original contents retained as .ssh/known_hosts.old
 ```
+
+or just remove the known_hosts:
+``` rm home/username/.ssh/known_hosts ```
+
 The original entry is saved to .ssh/known_hosts.old in case it's needed in the future.
 
 After removing the 192.168.1.84 entry from the  known_hosts file, I attempted the connection again to host 192.168.1.84:
