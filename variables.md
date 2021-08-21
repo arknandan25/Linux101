@@ -1,4 +1,4 @@
-1. Setting the value for a varaible
+### Setting the value for a variable
 Note there is no space on either side of the equals ( = ) sign. We also leave off the $ sign from the beginning of the variable name when setting it.
 Variable names may be uppercase or lowercase or a mixture of both but Bash is a case sensitive environment so whenever you refer to a variable you must be consistent in your use of uppercase and lowercase letters. 
 You should always make sure variable names are descriptive. This makes their purpose easier for you to remember.
@@ -27,7 +27,7 @@ YOU ENtered 33
 HI
 ```
 
-2. Comand substitution
+### Comand substitution
 Command substitution allows us to take the output of a command or program (what would normally be printed to the screen) and save it as the value of a variable. To do this we place it within brackets, preceded by a $ sign.
 
 ```
@@ -55,7 +55,7 @@ ark-ubuntu-linux-2% echo $var
 ```
 
 
-3. Special Variables
+### Special Variables
 
 There are a few other variables that the system sets for you to use as well.
 
@@ -72,5 +72,5 @@ $RANDOM - Returns a different random number each time is it referred to.
 $LINENO - Returns the current line number in the Bash script.
 
 
-LInk for basics with exporting variables, setting vars, special vars: https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php
+Link for basics with exporting variables, setting vars, special vars: https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php
 
