@@ -146,3 +146,5 @@ let g:rainbow_active = 1
 
 ```
 ----Current Configuration ends here------
+Customizing vim links: 
+* https://dev.to/shahinsha/how-to-make-vim-a-python-ide-best-ide-for-python-23e1
