@@ -34,6 +34,23 @@ Adding line numbers to VIM:
 
 
 
+### Tricks and Tips to become a Pro
+- Delete a line : dd (in non-insert mode)
+- When a line is deleted, its stored in teh current buffer, press 'p' to paste it in desired location
+- Duplicate line?
+- Copy a block of lines to another location?
+- Press `u` to undo last changes
+- Delete a block of code at once?
+- Comment a bunch of lines all together
+	- Ctrl + v: goto visual block mode
+	- use arrow keys to go to lines to comment
+	- SHift + I -> Press # -> will add # to first line
+	- Press Esc -> Adds comment to all lines
+- Uncomment a bunch of commecnted lines:
+	- Ctrl + V: Visual block mode
+ 	- x: removes the first character from line, i.e. the # comment; (be careful of your selection as it can delete multiple characters)
+
+
 
 ```
 
